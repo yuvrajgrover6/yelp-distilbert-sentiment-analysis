@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+models/*.pt
+models/*.pth
+checkpoints/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Data files (uncomment if data is large)
+# data/*.csv
+# data/*.json
+# data/*.parquet
+
+# Outputs
+outputs/logs/
+outputs/plots/
+outputs/temp/
+outputs/checkpoints/
+
+# Model artifacts
+wandb/
+mlruns/
+tensorboard_logs/
+
+# Large model files (if needed)
+# models/pytorch_model.bin
+# models/model.safetensors
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
