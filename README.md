@@ -20,7 +20,8 @@ yelp-distilbert-sentiment-analysis/
 │   ├── 01_data_processing_and_training.ipynb # Main training notebook
 │   └── 02_model_inference.ipynb             # Inference and evaluation
 ├── utils/
-│   └── data_preprocessing_utils.ipynb       # Utility functions
+│   ├── preprocessing.py                     # Centralized preprocessing functions
+│   └── data_preprocessing_utils.ipynb       # Utility functions (reference)
 ├── models/
 │   └── best_distilbert_model.pt            # Trained model weights
 ├── outputs/
@@ -56,13 +57,13 @@ yelp-distilbert-sentiment-analysis/
 ### Usage
 
 #### 1. Data Preprocessing
-Use the utility notebook to prepare your data:
+Use the centralized preprocessing functions:
 ```python
-# In utils/data_preprocessing_utils.ipynb
-from data_preprocessing_utils import process_yelp_data
+# Import preprocessing functions
+from utils.preprocessing import preprocess_yelp_data
 
-# Process the complete pipeline
-train_texts, val_texts, test_texts, train_labels, val_labels, test_labels, processor = process_yelp_data("../data/yelp_restaurants_hotels_ver2.csv")
+# Complete preprocessing pipeline
+train_texts, val_texts, test_texts, train_labels, val_labels, test_labels, label_encoder = preprocess_yelp_data("data/yelp_restaurants_hotels_ver2.csv")
 ```
 
 #### 2. Model Training
